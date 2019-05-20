@@ -13,7 +13,9 @@ class KidsController < ApplicationController
   end
 
   def create
+    @user = current.user
     @kid = Kid.new(kid_params)
+    @kid.user = @user
     if @kid.save
       redirect_to kid_path(@kid)
     else
