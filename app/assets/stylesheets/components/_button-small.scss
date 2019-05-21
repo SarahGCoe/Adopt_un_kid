@@ -1,0 +1,54 @@
+.product-btn-small button {
+  float: right;
+  display: inline;
+  height: 40px;
+  width: 100px;
+  margin: 0 40px 0 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 4%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: white;
+  background-color: grey;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-btn-small button:hover {
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dedede;
+}
+.product-btn-small {
+  height: 103px;
+  width: 100%;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-btn-small p {
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 4px 0 0 38px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: grey;
+}

@@ -1,0 +1,118 @@
+// .cards-kid {
+//   overflow: hidden;
+//   height: 120px;
+//   position: relative;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   align-items: center;
+//   display: flex;
+//   background-position: center;
+//   padding-top: 0px;
+//   margin-bottom: 20px;
+//   border-radius: 4px;
+// }
+
+// .cards-kid .img-kid {
+//   height: 100%;
+//   width: 120px;
+//   object-fit: cover;
+// }
+
+// .cards-kid h2 {
+//   text-decoration: none;
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .cards-kid p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+
+// }
+
+.cards-kid .cards-product-infos {
+  padding: 20px;
+  position: absolute;
+}
+
+
+.cards-kid {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  padding-bottom: -10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-kid > .img-kid {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards-pricings h2 {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.cards-kid h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards-kid p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.cards-kid .cards-product-infos {
+  display: block;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-kid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-kid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-kid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-kid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-kid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
