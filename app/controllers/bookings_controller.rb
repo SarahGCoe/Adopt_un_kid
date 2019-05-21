@@ -14,10 +14,20 @@ class BookingsController < ApplicationController
     @booking.kid = @kid
     @booking.user = current.user
     if @booking.save
-      redirect_to booking_path(new)
+      redirect_to kid_booking_path(@booking)
     else
       render :new
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  private
+
+  def set_booking_params
+    params.require(:booking).permit(:dates, :id)
   end
   
 end
