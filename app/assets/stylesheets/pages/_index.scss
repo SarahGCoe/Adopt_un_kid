@@ -1,27 +1,17 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "cards";
 
 .container {
   margin: 50px auto;
   max-width: 900px;
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
-a {
-  color: #ed3833;
+.cards-product-infos h2{
+  color: #ed3833
 }
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  color: grey;
-}
-
-u {
-  color: grey;
-}
-
 
