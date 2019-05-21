@@ -4,15 +4,17 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @kid = Kid.find(params[:kid_id])
+
     @booking = Booking.new
     # form_for!
   end
 
   def create
-    @kid = kid.find(params[:kid_id])
+    @kid = Kid.find(params[:kid_id])
     @booking = Booking.new(booking_params)
     @booking.kid = @kid
-    @booking.user = current.user
+    @booking.user = current_user
     if @booking.save
       redirect_to kid_booking_path(@booking)
     else
@@ -26,8 +28,7 @@ class BookingsController < ApplicationController
 
   private
 
-  def set_booking_params
-    params.require(:booking).permit(:dates, :id)
-  end
-  
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :id)
+  end 
 end
