@@ -7,9 +7,9 @@
           <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
           <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
         </div>
-         <div class="product-btn-small btn-details">
+         <div class="card-product-details">
           <p><span><%= kid.price %></span>€</p>
-          <button type="button"><%= link_to "more details", kid_path(kid) %></button>
+         <%= link_to "more details", kid_path(kid), class: "button-small" %>
         </div>
       </div>
     <% end%>

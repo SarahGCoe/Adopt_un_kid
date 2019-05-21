@@ -1,14 +1,15 @@
-.product-btn-small button {
+.button-small {
   float: right;
-  display: inline;
+  display: inline-block;
   height: 40px;
   width: 100px;
   margin: 0 40px 0 16px;
   box-sizing: border-box;
   border: transparent;
-  border-radius: 4%;
+  text-align: center;
+  border-radius: 40px;
   font-family: 'Raleway', sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -16,9 +17,10 @@
   background-color: grey;
   cursor: pointer;
   outline: none;
+  padding: 4px;
 }
 
-.product-btn-small button:hover {
+.button-smal:hover {
   background-color: grey;
   text-decoration: none;
   color: white;
@@ -35,14 +37,14 @@ a:link {
 a:hover {
   color: #dedede;
 }
-.product-btn-small {
+.card-product-details {
   height: 103px;
   width: 100%;
   margin-top: 17px;
   position: relative;
 }
 
-.product-btn-small p {
+.card-product-details p {
   display: inline-block;
   position: absolute;
   height: 50px;
