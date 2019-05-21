@@ -15,6 +15,7 @@ user = User.create!(name: Faker::Science.scientist,
 
                     email: Faker::Internet.email,
                     password: Faker::GreekPhilosophers.quote)
+
 puts 'Creating 5 Kids...'
   5.times do |j|
     kid = Kid.create!(name: "#{Faker::Name.name} #{Faker::Superhero.power}",
