@@ -12,8 +12,10 @@ PERSONALITY = ["grumpy", "happy", "sleepy", "dopey", "bashful", "shy", "sneezy"]
 puts 'Creating 10 Users...'
 10.times do |i|
 user = User.create!(name: Faker::Science.scientist,
+
                     email: Faker::Internet.email,
                     password: Faker::GreekPhilosophers.quote)
+
 puts 'Creating 5 Kids...'
   5.times do |j|
     kid = Kid.create!(name: "#{Faker::Name.name} #{Faker::Superhero.power}",
@@ -25,6 +27,5 @@ puts 'Creating 5 Kids...'
   end
 end
 puts "Done!"
-
 
 
