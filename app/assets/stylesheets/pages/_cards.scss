@@ -1,0 +1,40 @@
+.cards-kid {
+  overflow: hidden;
+  height: 120px;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  display: flex;
+  background-position: center;
+  padding-top: 0px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.cards-kid .img-kid {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.cards-kid h2 {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards-kid p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+
+}
+
+.cards-kid .cards-kid-infos {
+  padding: 16px;
+  position: absolute;
+}

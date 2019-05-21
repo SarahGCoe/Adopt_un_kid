@@ -1,10 +1,12 @@
-<!-- <div class="container">
-
-  <% @kids.each do |kid| %>
-    <div class="img-kid"><%= kid.photo %></div>
-    <p><%= link_to kid.name , kid_path(kid) %></p>
-    <p><%= kid.age_category %></p>
-    <p><%= kid.personality %></p>
-  <% end%>
-
-</div> -->
+<div class="container">
+    <% @kids.each do |kid| %>
+      <div class="cards-kid">
+        <div class="img-kid"><%= kid.photo %></div>
+        <div class="cards-product-infos">
+          <h2><%= link_to kid.name , kid_path(kid) %></h2>
+          <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
+          <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
+        </div>
+      </div>
+    <% end%>
+</div>
