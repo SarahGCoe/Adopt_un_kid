@@ -1,7 +1,25 @@
 
+<div class="container-booking">
+	<h5>You are booking <%= @kid.name %></h5><br>
+	<div class="card-booking-summerize">
+		<div class="card-booking-kid">	
+			<div class="img-kid" style="background-image: url(https://images.pexels.com/photos/1068205/pexels-photo-1068205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+		    </div>
+			  <div class="card-booking-summerize-description">
+				  <p>Name:<strong><%= @kid.name %></strong></p>
+				  <p>Age category: <strong><%= @kid.age_category%></strong></p>
+				  <p>personality: <strong><%= @kid.personality %></strong></p>
+				  <p>Description:<br> <%= @kid.description %></p>
+			  </div>
+		</div>
 
-<%= simple_form_for [@kid, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Book a kid" %>
-<% end %>
+        <div class="card-booking-settings">
+			<%= simple_form_for [@kid, @booking] do |f| %>
+			  <%= f.input :start_date %>
+			  <%= f.input :end_date %>
+			  <%= f.submit "Confirm reservation", class: "product-btn" %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
