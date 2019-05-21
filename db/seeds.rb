@@ -14,13 +14,17 @@ puts 'Creating 10 Users...'
 user = User.create!(name: Faker::Science.scientist,
                     email: Faker::Internet.email,
                     password: Faker::GreekPhilosophers.quote)
+puts 'Creating 5 Kids...'
+  5.times do |j|
+    kid = Kid.create!(name: "#{Faker::Name.name} #{Faker::Superhero.power}",
+                      description: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
+                      price: rand(500),
+                      age_category: AGE.sample,
+                      personality: PERSONALITY.sample,
+                      user: user)
+  end
 end
 puts "Done!"
 
 
-# kid = Kid.create!(name: Faker::Name.name,
-#                   description: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
-#                   price: rand(500),
-#                   age_category: AGE.sample,
-#                   personality: PERSONALITY.sample)
-# kid.user = user
+
