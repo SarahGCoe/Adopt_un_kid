@@ -15,8 +15,8 @@ body {
 
 .product-img {
   float: left;
-  height: 420px;
-  width: 327px;
+  height: 100%;
+  width: 50%;
 }
 
 .product-img img {
@@ -25,8 +25,8 @@ body {
 
 .product-info {
   float: left;
-  height: 420px;
-  width: 327px;
+  height: 100%;
+  width: 50%;
   border-radius: 0 7px 10px 7px;
   background-color: #ffffff;
 }
