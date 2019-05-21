@@ -1,1 +1,14 @@
-show.html.erb
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="<%= https://images.pexels.com/photos/1068205/pexels-photo-1068205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 %>" class="card-img" alt="kid-picture">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= @kid.name %></h5>
+        <p class="card-text"><%= @kid.description %></p>
+        <p class="card-text"><small class="text-muted"><%= @kid.age_category @kid.personnality @kid.price %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
