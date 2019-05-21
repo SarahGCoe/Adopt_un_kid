@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'pages#dashboard'
   resources :kids do
-    resources :bookings, only: [:index, :create, :new, :show]
+    resources :bookings, only: [:create, :new, :show]
   end
-
+  resources :bookings, only: :index
 end

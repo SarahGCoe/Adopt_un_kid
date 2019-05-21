@@ -1,6 +1,15 @@
 Bookings
 
-<% @bookings.each do |booking| %>
-<%= @booking.id %>
-<% end %>
+<div class="container">
+    <% @bookings.each do |booking| %>
+      <div class="cards-kid">
+        <div class="img-kid"><%= booking.kid.photo %></div>
+        <div class="cards-product-infos">
+          <h2><%= link_to booking.kid.name , kid_path(booking.kid) %></h2>
+          <p><u>Age category:</u>  <b><%= booking.kid.age_category %></b></p>
+          <p><u>Personality:</u>   <b><%= booking.kid.personality %></b></p>
+        </div>
+      </div>
+    <% end%>
+</div>
 
