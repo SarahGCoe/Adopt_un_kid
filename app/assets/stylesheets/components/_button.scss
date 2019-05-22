@@ -1,7 +1,6 @@
 .btn {
   float: right;
   display: inline-block;
-  height: 50px;
   width: 150px;
   margin: 0 40px 0 16px;
   box-sizing: border-box;
@@ -15,11 +14,16 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  padding: 5%;
+  background-color: #ff5d6e;
+  cursor: pointer;
+  outline: none;
+  padding: 18px;
   color: white;
+  opacity: 0.8;
 }
 
 .btn:hover {
-  background-color: #79b0a1;
+  background-color: #ff5d6e;
   color: white;
+  opacity: 1;
 }

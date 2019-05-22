@@ -2,7 +2,7 @@
   <h5>You are booking <%= @kid.name %></h5><br>
   <div class="card-booking-summerize">
     <div class="card-booking-kid">
-      <div class="img-kid" style="background-image: url(https://images.pexels.com/photos/1068205/pexels-photo-1068205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+      <div class="img-kid" style="background-image: url('<%= cl_image_path @kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')">
         </div>
         <div class="card-booking-summerize-description">
           <p>Name:<strong><%= @kid.name %></strong></p>
