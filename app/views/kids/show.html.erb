@@ -11,7 +11,9 @@
 
     <div class="product-price">
       <p><span><%= @kid.price %></span>€ /day</p>
-      <div class="btn"><%= link_to "Book a kid", new_kid_booking_path(@kid), style:"color:white;"%></div>
+      <%= link_to new_kid_booking_path(@kid), style:"color:white;" do%>
+      <div class="btn"> Book a kid</div>
+      <% end %>
     </div>
     <div class="back-link">
       <a><%= link_to '< Back to Kids list', kids_path %></a>
