@@ -1,6 +1,37 @@
-Bookings
-
-<% @bookings.each do |booking| %>
-<%= @booking.id %>
-<% end %>
+<div class="container-large" style="width:900px; margin:auto">
+  <h1>My bookings</h1>
+  <div class="container">
+    <% @bookings.each do |booking| %>
+      <div class="cards-kid">
+       <div class="img-kid"><%= booking.kid.photo %></div>
+       <div class="cards-product-infos">
+          <h2 class="name-kid"><%= booking.kid.name %></h2>
+          <p><u>Age category:</u>  <b><%= booking.kid.age_category %></b></p>
+          <p><u>Personality:</u>   <b><%= booking.kid.personality %></b></p>
+        </div>
+        <div class="card-product-details">
+          <p><span><%= booking.kid.price %></span>€</p>
+          <%= link_to "more details", kid_path(booking.kid), class: "button-small" %>
+        </div>
+      </div>
+    <% end%>
+  </div>
+  <h1>My kids</h1>
+  <div class="container">
+    <% @user.kids.each do |kid| %>
+      <div class="cards-kid">
+       <div class="img-kid"><%= kid.photo %></div>
+       <div class="cards-product-infos">
+          <h2 class="name-kid"><%= kid.name %></h2>
+          <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
+          <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
+        </div>
+        <div class="card-product-details">
+          <p><span><%= kid.price %></span>€</p>
+          <%= link_to "more details", kid_path(kid), class: "button-small" %>
+        </div>
+      </div>
+    <% end%>
+  </div>
+</div>
 
