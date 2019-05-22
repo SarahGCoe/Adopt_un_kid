@@ -1,1 +1,13 @@
-show.html.erb
+
+<div class= "booking-confirmation-container">
+	<h5> Booking Confirmed ! <i class="fas fa-check-circle" style="color:181, 217, 156, 1"></i> </h5>
+	<p> Thank you <%= current_user.name.capitalize %> for your reservation ! <i class="em em-tada"></i></p>
+
+	<p> An e-mail with your reservation details is on its way !</p>
+
+	<div class="back-link"><%= link_to 'Back to my Dashboard', bookings_path %></div>
+
+</div>
+
+
+

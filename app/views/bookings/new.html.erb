@@ -12,12 +12,12 @@
         </div>
     </div>
 
-        <div class="card-booking-settings">
-      <%= simple_form_for [@kid, @booking] do |f| %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-        <%= f.submit "Confirm reservation", class: "product-btn" %>
-      <% end %>
+    <div class="card-booking-settings">
+        <%= simple_form_for [@kid, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Confirm reservation", class: "product-btn" %>
+        <% end %>
     </div>
   </div>
 </div>
