@@ -5,12 +5,13 @@
   <div class="product-info">
     <div class="product-text">
       <h1><%= @kid.name %></h1>
-      <h2><%= @kid.age_category %> <%= @kid.personality %></h2>
+      <h2><%= @kid.personality %> | <%= @kid.age_category %></h2>
       <p><%= @kid.description %></p>
     </div>
     <div class="product-btn">
       <p><span><%= @kid.price %></span>€</p>
       <button type="button"><%= link_to "Book a kid", new_kid_booking_path(@kid), style:"color:white;"%></button>
+
     </div>
   </div>
 </div>

@@ -1,8 +1,8 @@
-.product-btn button {
+.btn {
   float: right;
   display: inline-block;
   height: 50px;
-  width: 176px;
+  width: 150px;
   margin: 0 40px 0 16px;
   box-sizing: border-box;
   border: transparent;
@@ -16,33 +16,10 @@
   background-color: #9cebd5;
   cursor: pointer;
   outline: none;
+  padding-top: 15px;
 }
 
-.product-btn button:hover {
+.btn:hover {
   background-color: #79b0a1;
-}
-
-.product-btn {
-  height: 103px;
-  width: 327px;
-  margin-top: 17px;
-  position: relative;
-}
-
-.product-btn p {
-  display: inline-block;
-  position: absolute;
-  height: 50px;
-  font-family: 'Trocchi', serif;
-  margin: 4px 0 0 38px;
-  font-size: 20px;
-  font-weight: lighter;
-  color: #474747;
-}
-
-span {
-  display: inline-block;
-  height: 50px;
-  font-family: 'Suranna', serif;
-  font-size: 28px;
+  color: #ffffff;
 }
