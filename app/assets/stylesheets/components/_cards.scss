@@ -41,6 +41,7 @@
 
 
 .cards-kid {
+  width: 317px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -52,7 +53,7 @@
 }
 
 .cards-kid > .img-kid {
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }

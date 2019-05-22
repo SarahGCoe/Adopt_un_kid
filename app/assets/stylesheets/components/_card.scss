@@ -18,10 +18,10 @@ body {
   float: left;
   height: 100%;
   width: 50%;
-}
-
-.product-img img {
   border-radius: 7px 0 0 7px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .product-info {
