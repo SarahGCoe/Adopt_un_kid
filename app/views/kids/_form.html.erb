@@ -11,7 +11,7 @@
           <%= f.input :name %>
           <%= f.input :description %>
           <%= f.input :price %>
-          <%= f.input :personality, as: :check_boxes, collection: Kid::PERSONALITY%>
+          <%= f.input :personality, collection: Kid::PERSONALITY%>
           <%= f.input :age_category, collection: Kid::AGE %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>

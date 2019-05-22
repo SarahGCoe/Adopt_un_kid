@@ -1,6 +1,5 @@
 <div class="wrapper">
-  <div class="product-img">
-    <img src="https://images.pexels.com/photos/1068205/pexels-photo-1068205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" height="420" width="327">
+  <div class="product-img" style="background-image: url('<%= cl_image_path @kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')">
   </div>
   <div class="product-info">
     <div class="product-text">
