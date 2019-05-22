@@ -8,10 +8,13 @@
       <h2><%= @kid.personality %> | <%= @kid.age_category %></h2>
       <p><%= @kid.description %></p>
     </div>
-    <div class="product-btn">
-      <p><span><%= @kid.price %></span>€</p>
-      <button type="button"></button>
+
+    <div class="product-price">
+      <p><span><%= @kid.price %></span>€ /day</p>
       <div class="btn"><%= link_to "Book a kid", new_kid_booking_path(@kid), style:"color:white;"%></div>
+    </div>
+    <div class="back-link">
+      <a><%= link_to '< Back to Kids list', kids_path %></a>
 
     </div>
   </div>
