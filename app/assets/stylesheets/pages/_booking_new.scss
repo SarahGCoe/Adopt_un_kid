@@ -45,11 +45,18 @@ h5 {
 }
 
 .card-booking-summerize-description p {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   line-height: 2.5;
+  text-align: left;
 }
 
 .card-booking-settings{
   height: 200px;
+}
+
+.card-booking-settings .btn {
+  width: 100%;
+  float: none;
+  margin: 50px 0 0 0;
 }

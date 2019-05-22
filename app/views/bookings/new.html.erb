@@ -5,7 +5,7 @@
       <div class="img-kid" style="background-image: url('<%= cl_image_path @kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')">
         </div>
         <div class="card-booking-summerize-description">
-          <p>Name:<strong><%= @kid.name %></strong></p>
+          <p>Name: <strong><%= @kid.name %></strong></p>
           <p>Age category: <strong><%= @kid.age_category%></strong></p>
           <p>personality: <strong><%= @kid.personality %></strong></p>
           <p>Description:<br> <%= @kid.description %></p>
@@ -16,7 +16,7 @@
         <%= simple_form_for [@kid, @booking] do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
-          <%= f.submit "Confirm reservation", class: "product-btn" %>
+          <%= f.submit "Confirm reservation", class: "btn" %>
         <% end %>
     </div>
   </div>
