@@ -1,5 +1,6 @@
 body {
-  background-color: #FFFDE8;
+  background-color: #feffea;
+;
 }
 
 .wrapper {
@@ -42,11 +43,11 @@ body {
   padding-right: 8px;
   font-size: 34px;
   color: #474747;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product-text h1,
 .product-btn p {
-  font-family: 'Bentham', serif;
 }
 
 .product-text h2 {
@@ -69,6 +70,7 @@ body {
   font-weight: lighter;
   overflow: auto;
   padding-right: 8px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product-price {

@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "new.kids";
 @import "booking_new";
 
 .container {
@@ -10,9 +11,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cards-product-infos h2{
-  color: #ed3833
+  color: rgba(181, 217, 156, 1);;
+  letter-spacing: 0.2em;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.cards-product-infos p {
+ font-family: 'Montserrat', sans-serif;
 }
 
