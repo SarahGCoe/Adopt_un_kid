@@ -2,6 +2,14 @@
   <div class="product-img" style="background-image: url('<%= cl_image_path @kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')">
   </div>
   <div class="product-info">
+    <ul class="list-inline tabs-underlined">
+      <li>
+        <%= link_to "Edit", edit_kid_path(@kid), class: "tab-underlined" %>
+      </li>
+      <li>
+        <%= link_to "Delete", kid_path(@kid), class: "tab-underlined", method: :delete, data: { confirm: "Are you sure?" }%>
+      </li>
+    </ul>
     <div class="product-text">
       <h1><%= @kid.name %></h1>
       <h2><%= @kid.personality %> | <%= @kid.age_category %></h2>
@@ -14,9 +22,8 @@
       <div class="btn"> Book a kid</div>
       <% end %>
     </div>
-    <div class="back-link">
-      <a><%= link_to '< Back to Kids list', kids_path %></a>
-
-    </div>
+  </div>
+  <div class="back-link">
+    <a><%= link_to '< Back to Kids list', kids_path %></a>
   </div>
 </div>
