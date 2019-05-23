@@ -54,8 +54,7 @@
       </ul>
     </div>
   </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<%= render 'shared/flashes' %>
   <%= yield %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
