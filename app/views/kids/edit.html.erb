@@ -1,0 +1,12 @@
+<div class="container-edit">
+  <div class="container-links">
+    <div class="back-link">
+      <a><%= link_to 'Back to Kid description', @kid %></a>
+    </div>
+    <div class="back-link">|</div>
+    <div class="back-link">
+      <a><%= link_to 'Back to Kids list', kids_path %></a>
+    </div>
+  </div>
+  <%= render 'form', kid: @kid %>
+</div>
