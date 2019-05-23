@@ -28,6 +28,7 @@
 }
 
 .product-text {
+  margin-top: 32px;
   height: 250px;
   width: 327px;
   h1 {
@@ -53,7 +54,7 @@
     line-height: 1.7em;
     font-size: 15px;
     font-weight: lighter;
-    overflow: auto;
+    overflow: scroll;
     padding-right: 12px;
     font-family: 'Montserrat', sans-serif;
   }
@@ -62,7 +63,7 @@
 .product-price {
   height: 103px;
   width: 327px;
-  margin-top: 36px;
+  padding-top: 16px;
   position: relative;
   p {
     display: inline-block;

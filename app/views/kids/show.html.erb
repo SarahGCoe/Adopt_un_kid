@@ -2,6 +2,7 @@
   <div class="product-img" style="background-image: url('<%= cl_image_path @kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')">
   </div>
   <div class="product-info">
+    <% if current_user == @kid.user %>
     <ul class="list-inline tabs-underlined">
       <li>
         <%= link_to "Edit", edit_kid_path(@kid), class: "tab-underlined" %>
@@ -10,6 +11,8 @@
         <%= link_to "Delete", kid_path(@kid), class: "tab-underlined", method: :delete, data: { confirm: "Are you sure?" }%>
       </li>
     </ul>
+    <% end %>
+
     <div class="product-text">
       <h1><%= @kid.name %></h1>
       <h2><%= @kid.personality %> | <%= @kid.age_category %></h2>
