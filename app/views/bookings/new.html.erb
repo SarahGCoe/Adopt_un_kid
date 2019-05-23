@@ -12,12 +12,15 @@
         </div>
     </div>
 
-    <div class="card-booking-settings">
-        <%= simple_form_for [@kid, @booking] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%= f.submit "Confirm reservation", class: "btn" %>
-        <% end %>
+    
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <%= simple_form_for [@kid, @booking] do |f| %>
+        <%= f.input :start_date, label: "Pick your dates", as: :string, required: false, input_html: {id: 'range_start'} %>
+        <%= f.submit "Confirm reservation", class: "btn" %>
+      <% end %>
+
     </div>
+
   </div>
 </div>
+

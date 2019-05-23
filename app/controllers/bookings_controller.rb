@@ -13,7 +13,10 @@ class BookingsController < ApplicationController
 
   def create
     @kid = Kid.find(params[:kid_id])
-    @booking = Booking.new(booking_params)
+    start_date = booking_params[:start_date][0...10].to_date
+    end_date = booking_params[:start_date][14..-1].to_date
+
+    @booking = Booking.new(start_date: start_date, end_date: end_date)
     @booking.kid = @kid
     @booking.user = current_user
     if @booking.save
@@ -30,6 +33,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :id)
+    params.require(:booking).permit(:start_date)
   end
 end
