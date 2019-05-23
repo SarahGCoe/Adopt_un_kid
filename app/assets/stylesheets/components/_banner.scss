@@ -1,33 +1,29 @@
+.container-banner {
+  text-align: center;
+  .btn {
+    float: none;
+    margin: 10px 0 0 0;
+  }
+}
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 100px 0;
   height: 100vh;
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    padding-bottom: 5px;
+  }
 }
-
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-  padding-bottom: 5px;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  padding-bottom: 5px;
-}
-
-.container-banner {
-  text-align: center;
-}
-
-.container-banner .btn {
-  float: none;
-  margin: 10px 0 0 0;
-}
-

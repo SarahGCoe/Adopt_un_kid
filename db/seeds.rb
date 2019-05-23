@@ -18,12 +18,14 @@ user = User.create!(name: Faker::Science.scientist,
 
 puts 'Creating 5 Kids...'
   5.times do |j|
-    kid = Kid.create!(name: "#{Faker::Name.name} #{Faker::Superhero.power}",
+    kid = Kid.new(name: "#{Faker::Name.name} #{Faker::Superhero.power}",
                       description: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
                       price: rand(500),
                       age_category: AGE.sample,
                       personality: PERSONALITY.sample,
                       user: user)
+    kid.remote_photo_url = "https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
+    kid.save
   end
 end
 puts "Done!"
