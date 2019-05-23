@@ -1,9 +1,10 @@
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);">
-    <div class="container-banner">
-      <h1>Want kids but <strong>afraid to commit?</strong></h1>
-      <p>Borrow them just for one day.</p>
-      <%= link_to new_user_registration_path do %>
-      <div class="btn">Join us</div>
-      <% end %>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);">
+  <div class="container-banner">
+    <h1>Want kids but <strong>afraid to commit?</strong></h1>
+    <p>Borrow them just for one day.</p>
+    <%= link_to new_user_registration_path do %>
+    <% unless user_signed_in? %>
+       <div class="btn">Join us</div>
+    <% end %>
+    <% end %>
   </div>
