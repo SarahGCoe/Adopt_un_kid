@@ -11,4 +11,11 @@ class Kid < ApplicationRecord
   validates :age_category, inclusion: { in: AGE }
   validates :personality, inclusion: { in: PERSONALITY }
   validates :price, numericality: { greater_than: 0 }
+
+  include PgSearch
+  pg_search_scope :search_by_attr,
+                  against: [:name, :description, :age_category, :personality],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end
