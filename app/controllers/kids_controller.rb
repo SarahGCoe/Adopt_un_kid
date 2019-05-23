@@ -1,8 +1,13 @@
 class KidsController < ApplicationController
+  require 'pg_search'
   before_action :find_kid, only: [:show, :edit, :update, :destroy]
 
   def index
-    @kids = Kid.all
+    if params[:search].present?
+      @kids = Kid.search_by_attr(params[:search])
+    else
+      @kids = Kid.all
+    end
   end
 
   def show
