@@ -1,39 +1,46 @@
 <div class="container-large text-align-center" style="width:900px; margin:auto">
+  <% if @user.bookings.empty? %>
+  <%= link_to "Book a kid", kids_path, class: "btn", style: "float: none" %>
+
+  <% else %>
   <h1>My bookings</h1>
   <div class="container">
     <% @bookings.each do |booking| %>
-      <div class="cards-kid">
-       <div class="img-kid" style="background-image: url('<%= cl_image_path booking.kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')"></div>
-       <div class="cards-product-infos">
-          <h2 class="name-kid"><%= booking.kid.name %></h2>
-          <p><u>Age category:</u>  <b><%= booking.kid.age_category %></b></p>
-          <p><u>Personality:</u>   <b><%= booking.kid.personality %></b></p>
-        </div>
-        <div class="card-product-details">
-          <p><span><%= booking.kid.price %></span>€</p>
-          <%= link_to "more details", kid_path(booking.kid), class: "button-small" %>
-        </div>
-      </div>
-    <% end%>
+    <div class="cards-kid">
+     <div class="img-kid" style="background-image: url('<%= cl_image_path booking.kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')"></div>
+     <div class="cards-product-infos">
+      <h2 class="name-kid"><%= booking.kid.name %></h2>
+      <p><u>Age category:</u>  <b><%= booking.kid.age_category %></b></p>
+      <p><u>Personality:</u>   <b><%= booking.kid.personality %></b></p>
+    </div>
+    <div class="card-product-details">
+      <p><span><%= booking.kid.price %></span>€</p>
+      <%= link_to "more details", kid_path(booking.kid), class: "button-small" %>
+    </div>
   </div>
-  <h1>My kids</h1>
-  <div class="container">
-    <% @user.kids.each do |kid| %>
-      <div class="cards-kid">
-       <div class="img-kid"style="background-image: url('<%= cl_image_path kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')"></div>
-       <div class="cards-product-infos">
-          <h2 class="name-kid"><%= kid.name %></h2>
-          <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
-          <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
-        </div>
-        <div class="card-product-details">
-          <p><span><%= kid.price %></span>€</p>
-          <%= link_to "more details", kid_path(kid), class: "button-small" %>
-        </div>
-      </div>
-    <% end%>
+  <% end%>
+</div>
+<% end %>
+<% if @user.kids.empty? %>
+<%= link_to "Add a new kid", new_kid_path, class: "btn", style: "float: none" %>
+<% else %>
+<h1>My kids</h1>
+<div class="container">
+  <% @user.kids.each do |kid| %>
+  <div class="cards-kid">
+   <div class="img-kid"style="background-image: url('<%= cl_image_path kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')"></div>
+   <div class="cards-product-infos">
+    <h2 class="name-kid"><%= kid.name %></h2>
+    <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
+    <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
   </div>
-
-  <%= link_to "Add a new kid", new_kid_path, class: "btn", style: "float: none" %>
+  <div class="card-product-details">
+    <p><span><%= kid.price %></span>€</p>
+    <%= link_to "more details", kid_path(kid), class: "button-small" %>
+  </div>
+</div>
+<% end%>
+</div>
+<% end %>
 </div>
 
