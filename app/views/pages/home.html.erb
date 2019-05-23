@@ -3,7 +3,9 @@
     <h1>Want kids but <strong>afraid to commit?</strong></h1>
     <p>Borrow them just for one day.</p>
     <%= link_to new_user_registration_path do %>
-    <div class="btn">Join us</div>
+    <% unless user_signed_in? %>
+       <div class="btn">Join us</div>
+    <% end %>
     <% end %>
   </div>
 </div>
