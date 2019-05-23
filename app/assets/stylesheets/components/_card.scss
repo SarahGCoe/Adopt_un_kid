@@ -1,8 +1,3 @@
-body {
-  background-color: #feffea;
-;
-}
-
 .wrapper {
   height: 420px;
   width: 654px;
@@ -35,42 +30,34 @@ body {
 .product-text {
   height: 300px;
   width: 327px;
-}
-
-.product-text h1 {
-  margin: 0 0 0 38px;
-  padding-top: 52px;
-  padding-right: 8px;
-  font-size: 34px;
-  color: #474747;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.product-text h1,
-.product-btn p {
-}
-
-.product-text h2 {
-  margin: 0 0 16px 38px;
-  font-size: 13px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #d2d2d2;
-  letter-spacing: 0.2em;
-}
-
-.product-text p {
-  height: 125px;
-  margin: 0 0 0 38px;
-  font-family: 'Playfair Display', serif;
-  color: #8d8d8d;
-  line-height: 1.7em;
-  font-size: 15px;
-  font-weight: lighter;
-  overflow: auto;
-  padding-right: 8px;
-  font-family: 'Montserrat', sans-serif;
+  h1 {
+    margin: 0 0 0 38px;
+    padding-top: 52px;
+    padding-right: 8px;
+    font-size: 34px;
+    color: #474747;
+    font-family: 'Montserrat', sans-serif;
+  }
+  h2 {
+    margin: 0 0 16px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+  p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: auto;
+    padding-right: 8px;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 .product-price {
@@ -78,22 +65,22 @@ body {
   width: 327px;
   margin-top: 17px;
   position: relative;
+  p {
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 0 38px;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #474747;
+  }
+  span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+  }
 }
 
-.product-price p {
-  display: inline-block;
-  position: absolute;
-  height: 50px;
-  font-family: 'Trocchi', serif;
-  margin: 0 0 0 38px;
-  font-size: 14px;
-  font-weight: lighter;
-  color: #474747;
-}
 
-span {
-  display: inline-block;
-  height: 50px;
-  font-family: 'Suranna', serif;
-  font-size: 28px;
-}
