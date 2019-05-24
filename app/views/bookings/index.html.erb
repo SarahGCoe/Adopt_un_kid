@@ -13,8 +13,8 @@
           </div>
           <div class="cards-product-infos">
             <h2 class="name-kid"><%= booking.kid.name %></h2>
-            <p><u>Age category:</u>  <b><%= booking.kid.age_category %></b></p>
-            <p><u>Personality:</u>   <b><%= booking.kid.personality %></b></p>
+            <p>Age category | <span><%= booking.kid.age_category %></span></p>
+            <p>Personality | <span><%= booking.kid.personality %></span></p>
           </div>
           <div class="card-product-details">
             <p><span><%= booking.kid.price %></span>€/day</p>
@@ -25,7 +25,7 @@
       </div>
     <% end %>
   </div>
-  
+
   <div class="container-dashboard-kids">
     <% if @user.kids.empty? %>
     <% else %>
@@ -37,8 +37,8 @@
           </div>
           <div class="cards-product-infos">
             <h2 class="name-kid"><%= kid.name %></h2>
-            <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
-            <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
+            <p>Age category | <span><%= kid.age_category %></span></p>
+            <p>Personality | <span><%= kid.personality %></span></p>
           </div>
           <div class="card-product-details">
             <p><span><%= kid.price %></span>€/day</p>
