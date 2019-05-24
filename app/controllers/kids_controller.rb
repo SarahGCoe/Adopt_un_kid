@@ -3,11 +3,6 @@ class KidsController < ApplicationController
   before_action :find_kid, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:search].present?
-      @kids = Kid.search_by_attr(params[:search])
-    else
-      @kids = Kid.all
-    end
     @kids = Kid.where.not(latitude: nil, longitude: nil)
     @markers = @kids.map do |kid|
       {
@@ -16,6 +11,12 @@ class KidsController < ApplicationController
         image_url: helpers.asset_url('tetine.png')
       }
     end
+    if params[:search].present?
+      @kids = Kid.search_by_attr(params[:search])
+    else
+      @kids = Kid.all
+    end
+
   end
 
   def show
