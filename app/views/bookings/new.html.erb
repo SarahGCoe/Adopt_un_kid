@@ -6,10 +6,10 @@
         <%= cl_image_tag @kid.photo, height: 300, width: 300, crop: :fill, gravity: :face %>
       </div>
         <div class="card-booking-summerize-description">
-          <p>Name: <strong><%= @kid.name %></strong></p>
-          <p>Age category: <strong><%= @kid.age_category%></strong></p>
-          <p>personality: <strong><%= @kid.personality %></strong></p>
-          <p>Description:<br> <%= @kid.description %></p>
+          <p><span>Name:</span> <%= @kid.name %></p>
+          <p><span>Age category:</span> <%= @kid.age_category%></p>
+          <p><span>personality:</span> <%= @kid.personality %></p>
+          <p><span>Description:</span><br> <%= @kid.description %></p>
         </div>
     </div>
 
