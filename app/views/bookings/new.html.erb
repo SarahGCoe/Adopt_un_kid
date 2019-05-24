@@ -18,7 +18,7 @@
       <p> <%= simple_form_for [@kid, @booking] do |f| %> <br>
         <%= f.input :start_date, label: "Pick your dates", as: :string, required: false, input_html: {id: 'range_start'}, id:'booking-input' %>
 
-        <div id="booking-total" class="hidden">
+        <div id="booking-total" class="hidden pb-3">
         <p> Price/day: <t><%= @kid.price %></t></p>
         </div>
 
