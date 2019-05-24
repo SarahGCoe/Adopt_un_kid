@@ -17,4 +17,16 @@
 
 .cards-product-infos p {
  font-family: 'Montserrat', sans-serif;
+ font-size: 13px;
+}
+
+.card-product-details p {
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 4px 0 0 38px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #474747;
 }
