@@ -13,16 +13,18 @@
         </div>
     </div>
 
-    
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-      <%= simple_form_for [@kid, @booking] do |f| %>
-        <%= f.input :start_date, label: "Pick your dates", as: :string, required: false, input_html: {id: 'range_start'} %>
+      <p> Price/day: <%= @kid.price %> </p>
+      <p> <%= simple_form_for [@kid, @booking] do |f| %> <br>
+        <%= f.input :start_date, label: "Pick your dates", as: :string, required: false, input_html: {id: 'range_start'}, id:'booking-input' %>
         <label type="submit" class="btn btn-booking">
-          <%= f.submit "Confirm reservation", class: 'd-none' %>
+          <%= f.submit "Confirm reservation", class: 'd-none' %> </p>
           Confirm reservation
         </label>
-      <% end %>
-
+      <% end %> <br>
+      <div id="booking-total" class="hidden">
+        <p> Price/day: <t><%= @kid.price %></t></p>
+      </div>
     </div>
 
   </div>
