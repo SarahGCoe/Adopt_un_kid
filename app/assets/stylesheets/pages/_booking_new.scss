@@ -2,7 +2,9 @@ h5 {
   margin: 20px;
   text-align: center;
   padding: 20px;
-  font-size: 25px;
+  font-size: 30px;
+  font-family: "Baloo Bhai", "cursive";
+  color: #B5D99C;
 }
 
 .container-booking {
@@ -40,7 +42,6 @@ h5 {
   }
 }
 
-
 .card-booking-summerize-description {
   padding: 20px;
   height: 100%;
@@ -51,6 +52,12 @@ h5 {
   line-height: 1.4;
   line-height: 2.5;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-booking-summerize-description span {
+  letter-spacing: 0.2em;
+  color: #474747;
 }
 
 .card-booking-settings{

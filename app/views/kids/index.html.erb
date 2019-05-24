@@ -5,11 +5,11 @@
        <div class="img-kid" style="background-image: url('<%= cl_image_path kid.photo, height: 300, width: 400, crop: :fill, gravity: :face %>')"></div>
         <div class="cards-product-infos">
           <h2 class="name-kid"><%= kid.name %></h2>
-          <p><u>Age category:</u>  <b><%= kid.age_category %></b></p>
-          <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
+          <p>Age category | <span><%= kid.age_category %></span></p>
+          <p>Personality | <span><%= kid.personality %></span></p>
         </div>
          <div class="card-product-details">
-          <p><span><%= kid.price %></span>€ /day</p>
+          <p><%= kid.price %> €/day</p>
          <%= link_to "more details", kid_path(kid), class: "button-small" %>
         </div>
       </div>
