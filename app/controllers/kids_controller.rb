@@ -8,6 +8,14 @@ class KidsController < ApplicationController
     else
       @kids = Kid.all
     end
+    @kids = Kid.where.not(latitude: nil, longitude: nil)
+    @markers = @kids.map do |kid|
+      {
+        lat: kid.latitude,
+        lng: kid.longitude,
+        image_url: helpers.asset_url('tetine.png')
+      }
+    end
   end
 
   def show
@@ -48,6 +56,6 @@ class KidsController < ApplicationController
   end
 
   def kid_params
-    params.require(:kid).permit(:name, :age_category, :photo, :price, :description, :personality)
+    params.require(:kid).permit(:name, :age_category, :photo, :price, :description, :personality, :address, :latitude, :longitude)
   end
 end
