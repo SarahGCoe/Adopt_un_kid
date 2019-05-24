@@ -1,0 +1,12 @@
+.container {
+  margin: 50px auto;
+  max-width: 900px;
+  flex-direction: row;
+  justify-content: space-around;
+  display: grid;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registration-link a {
+  color: $green-light;
+}
