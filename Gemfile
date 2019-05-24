@@ -16,7 +16,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-
+gem 'geocoder'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'

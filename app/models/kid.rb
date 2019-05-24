@@ -7,10 +7,13 @@ class Kid < ApplicationRecord
   belongs_to :user
   has_many :bookings
 
-  validates :name, :description, :price, presence: true
+  validates :name, :description, :price, :address, presence: true
   validates :age_category, inclusion: { in: AGE }
   validates :personality, inclusion: { in: PERSONALITY }
   validates :price, numericality: { greater_than: 0 }
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   include PgSearch
   pg_search_scope :search_by_attr,
