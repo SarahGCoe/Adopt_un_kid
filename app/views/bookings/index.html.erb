@@ -1,9 +1,7 @@
 <div class="container-dashboard">
 
-  <div class="container-dashboard-bookings">
+  <div class="container-dashboard-kids">
     <% if @user.bookings.empty? %>
-  <%= link_to "Book a kid", kids_path, class: "btn", style: "float: none" %>
-
   <% else %>
     <h1>My bookings</h1>
     <div class="container-index">
@@ -24,6 +22,7 @@
       <% end%>
       </div>
     <% end %>
+    <%= link_to "Book a kid", kids_path, class: "btn", style: "float: none" %>
   </div>
 
   <div class="container-dashboard-kids">
@@ -43,6 +42,11 @@
           <div class="card-product-details">
             <p><span><%= kid.price %></span>€/day</p>
             <%= link_to "more details", kid_path(kid), class: "button-small" %>
+          </div>
+          <div class="pl-3 pb-5">
+            <p>
+              Rented <%= kid.bookings.count %> times
+             </p>
           </div>
         </div>
       <% end%>
