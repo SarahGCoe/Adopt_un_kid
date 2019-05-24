@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(start_date: start_date, end_date: end_date)
     @booking.kid = @kid
     @booking.user = current_user
-    if @booking.save
+    if @booking.save 
       redirect_to booking_path(@booking)
     else
       render :new
