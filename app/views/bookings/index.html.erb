@@ -10,7 +10,7 @@
           <p><u>Personality:</u>   <b><%= booking.kid.personality %></b></p>
         </div>
         <div class="card-product-details">
-          <p><span><%= booking.kid.price %></span>€</p>
+          <p><span><%= booking.kid.price %></span>€/day</p>
           <%= link_to "more details", kid_path(booking.kid), class: "button-small" %>
         </div>
       </div>
@@ -27,7 +27,7 @@
           <p><u>Personality:</u>   <b><%= kid.personality %></b></p>
         </div>
         <div class="card-product-details">
-          <p><span><%= kid.price %></span>€</p>
+          <p><span><%= kid.price %></span>€/day</p>
           <%= link_to "more details", kid_path(kid), class: "button-small" %>
         </div>
       </div>
